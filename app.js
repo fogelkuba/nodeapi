@@ -6,13 +6,13 @@ const morgan = require('morgan');
 const PORT = 8080;
 
 //routes
-const {getPosts} = require('./routes.post');
+const postRoutes = require('./routes/post');
 
 //middleware
 app.use(morgan('dev'));
 
-app.use('/', getPosts);
+app.use('/', postRoutes);
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log(`App is listening on port ${PORT}`);
 })
