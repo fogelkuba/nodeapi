@@ -11,7 +11,7 @@ const {getPosts} = require('./routes.post');
 //middleware
 app.use(morgan('dev'));
 
-app.get('/', getPosts);
+app.use('/', getPosts);
 
 app.listen(port, () => {
     console.log(`App is listening on port ${PORT}`);
